@@ -32,50 +32,19 @@
                   <th width="40%">Progress</th>
                   <th></th>
                 </tr>
-                <tr>
-                  <td>Interested</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-success" style="width: 55%"></div>
-                    </div>
-                  </td>
-                  <td>
-                    <span class="badge bg-green">55%</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Not interested</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-success" style="width: 80%"></div>
-                    </div>
-                  </td>
-                  <td>
-                    <span class="badge bg-green">80%</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Not interested</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-success" style="width: 80%"></div>
-                    </div>
-                  </td>
-                  <td>
-                    <span class="badge bg-green">80%</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Not interested</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-success" style="width: 80%"></div>
-                    </div>
-                  </td>
-                  <td>
-                    <span class="badge bg-green">80%</span>
-                  </td>
-                </tr>
+                {% for training in trainings %}
+                  <tr>
+                    <td> {{ training.name }} </td>
+                    <td>
+                      <div class="progress progress-xs">
+                        <div class="progress-bar progress-bar-success" style="width: {{ training.progress.percentage|default:'0' }}%"></div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="badge bg-green">{{ training.progress.percentage|default:'0' }}%</span>
+                    </td>
+                  </tr>
+                {% endfor %}
               </table>
             </div>
           </div>
