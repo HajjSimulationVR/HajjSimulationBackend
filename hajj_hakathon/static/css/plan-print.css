@@ -1,0 +1,19 @@
+@media print {
+  .invitePeople-container, .box-footer, .current-client, .box-title{
+    display: none !important;
+  }
+
+  .print-logo{
+    width: 300px;
+    display: block !important;
+    margin: auto;
+  }
+
+  .box.box-info, .with-border{
+    border: none !important;
+  }
+
+  .print-title{
+    display: block !important;
+  }
+}

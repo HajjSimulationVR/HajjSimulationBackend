@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+  postgres:
+    environment:
+      - POSTGRES_USER=divuro_dbuser
+      - POSTGRES_DB=divuro_db
+
+  django:
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_USER=divuro_dbuser
+      - POSTGRES_DB=divuro_db
+      - USE_DOCKER=yes
+
+    depends_on:
+      - mailhog
+
+  celeryworker:
+    volumes:
+      - .:/app
+
+  celerybeat:
+    volumes:
+      - .:/app
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"

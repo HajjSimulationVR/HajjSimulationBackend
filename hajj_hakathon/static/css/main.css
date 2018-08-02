@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Cairo:200,300,400,600,700,900&subset=arabic');
+
+
+body{
+  font-family: 'Roboto', 'Cairo', sans-serif !important;
+  font-size: 1.2rem;
+}
+
+.box-title {
+  font-family: 'Roboto', 'Cairo', sans-serif !important;
+}
+
+#id_remember{
+  top: 0px;
+  left: 15px;
+}
+
+body{
+  direction: ltr;
+}
+
+.sign-in-img img{
+  width: 200px;
+}
+
+#login{
+  background: url("../images/bg-1.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+#logout_button{
+    background: none;
+    border: none;
+    color: #777;
+    padding: 3px 20px;
+}
+
+#logout_button:hover{
+    background-color: #e1e3e9;
+    color: #333;
+
+}
+/* search result page */
+.unit-item{
+  /* height: 200px; */
+  margin-bottom: 20px;
+}
+
+.unit-item img{
+  max-width: 150px;
+  display: block;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+.unit-icon{
+  display: block;
+}
+
+.unit-icon-number{
+  display: block;
+}
+
+.unit-deatils{
+  margin-top: 20px;
+}
+
+.unit-deatils .col-md-3{
+  padding: 10px;
+  height: 80px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.unit-item .btn{
+  margin-top: 40px;
+}
+
+.user-panel{
+  height: 80px;
+}
+
+.user-panel{
+  color: #fff;
+}
+
+/* add new client  */
+.property-info{
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.person-info {
+  margin-bottom: 20px;
+}
+
+.widget-user{
+  display: block;
+}
+
+/* .bg-aqua-active, .modal-info .modal-header, .modal-info .modal-footer{
+  background-color: rgba(0,0,0,0.04) !important;
+} */
+
+.bg-aqua-active{
+  /* color: #333 !important; */
+  text-align: center; 
+}
+
+
+.liked-units{
+  border-bottom: 1px solid #ccc;
+}
+
+
+/* task */
+.task-details{
+  margin-top: 40px;
+}
+
+
+.task-details ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 20px auto;
+  font-size: 1.2em;
+  margin-top: 20px;
+  overflow: hidden;
+  width: 457px;
+}
+
+@media(max-width:768px){
+  .task-details ul{
+    width: 365px !important;
+  }
+}
+
+
+.task-details ul li{
+  float: left;
+  border: 1px solid #fff;
+  padding: 10px;
+  height: 89px;
+  background-color: rgb(67, 233, 123);
+  color: #fff;
+  width: 25%;
+}
+
+.up-mission .task-details ul li{
+  background-color: #e74c3c !important;
+}
+
+.task-details ul li span{
+  display: block;
+  color: #fff;
+  font-weight: 500;
+}
+
+.task-details .importance{
+  width: 75%;
+}
+
+.btn-shadow-round{
+  border-radius: 20px;
+  padding: 8px 30px;
+  margin-top: 20px;
+  /* box-shadow: 12px 15px 20px rgba(0, 0, 0, 0.1); */
+  font-weight: 200;
+}
+
+.stack .btn, .modal-footer .btn, .cardslider__card .btn{
+  border-radius: 20px;
+  padding: 8px 30px;
+  box-shadow: 12px 15px 20px rgba(0, 0, 0, 0.1);
+  /* font-weight: 200; */
+}
+
+.cardslider__card .btn{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  width: 35%;
+}
+
+.btn-round{
+  border-radius: 20px;
+  padding: 8px 30px;
+  font-weight: 200;
+}
+
+.widget-user-header.bg-aqua-active{
+  background-color: #00D65D !important;
+}
+
+.description-block, .description-block .description-header {
+  color: #333 !important;
+  font-weight: 300;
+}
+
+.up-mission .task-details ul li{
+  background-color: #e74c3c !important;
+}
+
+.modal span.quantity{
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding-top: 20px;
+  background-color: #2ecc71 !important;
+  font-size: 1.2em;
+}
+/* 
+.current-client{
+  position: fixed;
+  top: 50px;
+  left: 18%;
+  z-index: 100;
+  right: 0;
+} */
+
+.current-client p{
+  font-size: 1.5em;
+  font-weight: 200;
+}
+
+.current-client .client-name{
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-left: 20px;
+  margin: auto;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  text-overflow: ellipsis;
+}
+
+.action-btn-container{
+  margin-top: 20px;
+  width: 85px;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.start-visit{
+  background-color: #2ecc71;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  text-align: center;
+  display: block;
+  display: table;
+  text-decoration: none !important;
+}
+
+.start-visit .fa{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.end-visit{
+  margin-top: 5px;
+  text-decoration: none !important;
+}
+
+/* missions modal */
+#missions{
+  position: fixed;
+  background-color: #fff;
+  z-index: 10000;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+.mission-item{
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,.1);
+  background-color: #fff;
+}
+
+.mission-item:hover{
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,.2);
+  color: #f7be7b;
+}
+
+.mission-item img{
+  width: 100px;
+}
+
+
+.mission-item{
+  margin-top: 20%;
+  padding: 60px;
+  display: block;
+  color: #f7be7b;
+}
+
+.mission-item img{
+  display: block;
+  height: 80px;
+  margin: auto;
+}
+
+#closeModal{
+  margin-top: 20px;
+  margin-right: 20px;
+  color: #333;
+}
+
+#fixedMission, #upMission{
+  display: none;
+}
+
+.mission-content form{
+  margin-top: 20px;
+}
+
+.modal-open{
+  overflow: auto;
+}
+
+/* .missions-table td, .missions-table th{
+  font-size: 1.02em;
+} */
+
+.task-count{
+  margin-top: 20px;
+}
+
+.badge.success{
+  background-color: rgb(67, 233, 123);
+}
+
+.badge.rest-mission{
+  background-color: rgb(67, 233, 123);
+}
+
+.upMissionsBage{
+  background-color: #e74c3c !important;
+}
+
+.filter-btn{
+  margin-top: 0 !important;
+}
+
+.box-body.table-responsive{
+  overflow: auto;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+  background-color: #00D65D;
+  border-color: #00D65D;
+}
+
+.emptystate img{
+  width: 100px !important;
+  display: block;
+  margin: 30px auto;
+}
+
+.emptystate p{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.datepicker.datepicker-dropdown{
+  z-index: 10000 !important;
+}
+
+.dropdown-menu{
+  min-width: auto;
+}
+
+.navbar-nav>.messages-menu>.dropdown-menu>li .menu>li>a>h4{
+  margin-left: 0;
+}
+
+.navbar-nav>.messages-menu>.dropdown-menu>li .menu>li>a>p{
+  margin-left: 0;
+}
+
+.navbar-nav>.notifications-menu>.dropdown-menu, .navbar-nav>.messages-menu>.dropdown-menu, .navbar-nav>.tasks-menu>.dropdown-menu{
+  width: 350px;
+}
+
+.dropdown-menu .header{
+  overflow: hidden !important;
+}
+
+.notificationsList a{
+  color: #333 !important;
+}
+
+.leadTabs .box.box-warning{
+  border: none !important;
+}
+
+/* loading */
+.loader{
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto;
+  display: block;
+  vertical-align: top;
+}
+
+svg path,
+svg rect{
+  fill: #FF6700;
+}
+
+.Mission-label{
+  background-color: #ecf0f1;
+  color: #333;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 150px;
+  padding: 5px;
+  border-radius: 50px;
+  top: 6px;
+}
+
+ul.notifications{
+  padding: 0;
+}
+
+.markall{
+  margin-top: 10px;
+}
+
+.reviewBox{
+  margin-top: 20px;
+}
+
+.quantity-container{
+  background-color: #f0ad4e;
+  border-radius: 50px;
+  font-size: 1.5em;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+}
+
+.quantity-container .badge{
+  background-color: #fff;
+  color: #f0ad4e;
+}
+
+.mission-status{
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  background-color: #bdc3c7;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.mission-status.not-approved{
+  background-color: #e74c3c;
+}
+
+.mission-status.approved{
+  background-color: #2ecc71;
+}
+
+.mission-status.pending{
+  background-color: #3498db;
+}
+
+.mission-counter{
+  width: 100px;
+  margin-left: 20px;
+}
+
+.select2{
+  width: 100% !important;
+}
+
+.clint-search{
+  padding: 20px;
+}
+
+.client-status{
+  font-size: 1.4em;
+}
+
+.client-status.client-success{
+  color: #00D65D;
+}
+
+.client-status.client-fail{
+  color: #e74c3c;
+}
+
+.notificationsList p{
+  word-break: break-all;
+  white-space: normal;
+}
+
+.client-logout{
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 0.8em;
+  margin-left: 15px;
+}
+
+.client-logout:hover{
+  background-color: #fff;
+  color: #F3945E !important;
+}
+
+.client-action-container{
+  width: 110px;
+  text-align: center;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.client-action-btn{
+  margin-top: 20px;
+}
+
+.upload-excel-container{
+  width:160px;
+  margin:auto;
+}
+
+
+.bootstrap-datetimepicker-widget{
+  display: block !important;
+}

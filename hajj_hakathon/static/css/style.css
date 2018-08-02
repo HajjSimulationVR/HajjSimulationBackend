@@ -1,0 +1,141 @@
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  display: block;
+  height: 440px;
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  line-height: 1;
+}
+
+.carousel-control{
+  background-image: none !important;
+  z-index: 100;
+}
+
+.carousel-content{
+  z-index: 11;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  color: #fff;
+}
+
+.project-details{
+  background-color: #fff;
+  /* height: 80px; */
+  padding: 20px;
+  padding-right: 50px;
+  overflow: hidden;
+}
+
+.project-details ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-details ul li{
+  float: right;
+  margin-right: 20px;
+  border: 1px solid #aaa;
+  padding: 10px 25px;
+  border-radius: 50px;
+}
+
+.project-details ul li i{
+  margin-left: 8px ;
+}
+
+.department-title{
+  font-size: 3em !important;
+}
+
+.department-cost{
+  font-size: 2em;
+  color: rgba(231, 76, 60,1.0);
+}
+
+.reserve-btn{
+  padding: 10px 40px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.departmentInstalment-btn{
+  float: right;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* .btn-default{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+ */
+.btn-print{
+  color: #333;
+  border-color: #333;
+  padding: 8px 29px;
+}
+
+#comparePlanBtn, #editPlan{
+  margin-top: 10px;
+}
+
+#planStatus{
+  margin-top: 10px;
+}
+
+table .radio{
+  display: table-cell;
+  padding-right: 25px !important;
+}
+
+.old-price{
+  /* text-decoration: line-through; */
+  color: #999;
+  font-size: 18px;
+}
+
+.tasks-container{
+  padding: 0;
+}
+
+.tasks-container ul{
+  list-style-type: none;
+}
+
+.tasks-container ul li{
+  display: table;
+  margin-top: 10px;
+}
+
+#map {
+  height: 300px;
+  margin-top: 20px;
+}
+
+.table-scroll{
+  overflow-x: scroll;
+  max-width: 90vw;
+  position: relative;
+}
+
+.table-scroll table{
+  width: 100vw;
+}
+
+.main-add-coupon{
+  margin-top: 20px;
+  display: block;
+  border: 1px solid #aaa;
+  padding: 10px 25px;
+  border-radius: 50px;
+  margin-left: 30px;
+  color: #aaa;
+}
+
+.main-add-coupon:hover, .main-add-coupon:active, .main-add-coupon:focus{
+  border: 1px solid #aaa !important;
+  color: #aaa;
+}

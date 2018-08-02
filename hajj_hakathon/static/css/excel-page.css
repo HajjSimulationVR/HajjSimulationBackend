@@ -1,0 +1,13 @@
+.excel-container img{
+  width: 70px;
+  display: block;
+  margin: auto;
+}
+
+.excel-container input{
+  display: block;
+}
+
+.excel-container{
+  padding-top: 20px;
+}
