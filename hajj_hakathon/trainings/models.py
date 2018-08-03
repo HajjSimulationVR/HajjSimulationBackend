@@ -15,8 +15,8 @@ class Training(TimeStampedModel):
 
 
 class Progress(TimeStampedModel):
-    training = models.OneToOneField('Training', related_name='progress', on_delete=models.CASCADE)
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name='progress', on_delete=models.CASCADE)
+    training = models.ForeignKey('Training', related_name='progresses', on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='progresses', on_delete=models.CASCADE)
     percentage = models.CharField(_('Percentage'), max_length=128)
 
     def __str__(self):

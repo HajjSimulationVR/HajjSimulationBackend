@@ -32,7 +32,7 @@ class TrainingSerializser(serializers.ModelSerializer):
 
     def get_percentage(self, obj):
         try:
-            return obj.progress.percentage
+            return obj.progresses.get(user=User.objects.first()).percentage
         except:
             return 0
 
