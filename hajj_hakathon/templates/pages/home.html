@@ -1,185 +1,201 @@
-{% extends "base.html" %}
-{% load staticfiles %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block extra_css %}
-  <link href='{% static "css/select2.min.css" %}' rel="stylesheet">
-  <link href='{% static "css/report.css" %}' rel="stylesheet">
-  <link href='{% static "css/report.css" %}' rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-  <script src="https://use.fontawesome.com/bc64d07721.js"></script>
-  <script src='{% static "js/Chart.js" %}'></script>
+  <head>
 
-{% endblock extra_css %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-{% block content %}
+    <title>Agency - Start Bootstrap Theme</title>
 
-<div class="row">
-  <div class="col-md-12">
-    <h3>Training Details</h3>
-    <div class="box box-warning">
-      <!--
-      <div class="box-header">
-        <h3 class="box-title">Clients details</h3>
+    <!-- Bootstrap core CSS -->
+    <link href='{% static "vendor/bootstrap/css/bootstrap.min.css" %}' rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href='{% static "vendor/font-awesome/css/font-awesome.min.css" %}' rel="stylesheet" type="text/css">
+    <link href='{% static "https://fonts.googleapis.com/css?family=Montserrat:400,700" %}' rel="stylesheet" type="text/css">
+    <link href='{% static "https://fonts.googleapis.com/css?family=Kaushan+Script" %}' rel='stylesheet' type='text/css'>
+    <link href='{% static "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" %}' rel='stylesheet' type='text/css'>
+    <link href='{% static "https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" %}' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href='{% static "css/agency.min.css" %}' rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">HAJJ VR</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">Sign In</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Sign Up</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      -->
-      <div class="box-body">
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Contact -->
+    <section id="team">
+            <div class="container">
         <div class="row">
-          <div class="col-md-8">
-            <div class="box-body no-padding">
-              <table class="table table-striped">
-                <tr>
-                  <th>Type</th>
-                  <th width="40%">Progress</th>
-                  <th></th>
-                </tr>
-                {% for training in trainings %}
-                  <tr>
-                    <td> {{ training.name }} </td>
-                    <td>
-                      <div class="progress progress-xs">
-                        <div class="progress-bar progress-bar-success" style="width: {{ training.progress.percentage|default:'0' }}%"></div>
-                      </div>
-                    </td>
-                    <td>
-                      <span class="badge bg-green">{{ training.progress.percentage|default:'0' }}%</span>
-                    </td>
-                  </tr>
-                {% endfor %}
-              </table>
-            </div>
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Sign In</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <form id="contactForm" name="sentMessage" novalidate="novalidate">
+              <div class="row">
+                <div class="container">
+                  <div class="col-md-offset-3 col-md-6">
+                    <div class="form-group">
+                      <input class="form-control" id="name" type="text" placeholder="Your Name *" data-validation-required-message="Please enter your name.">
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" id="email" type="email" placeholder="Your Email *" data-validation-required-message="Please enter your email address.">
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="col-lg-12 text-center">
+                    <div id="success"></div>
+                    <button onclick="location.href='{% url "trainings:list" %}';" id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Sign In</button>
+                  </div>
+                  
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
- 
-{% endblock content %}
+    </section>
 
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Sign up</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <form id="contactForm" name="sentMessage" novalidate="novalidate">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input class="form-control" id="name" type="text" placeholder="Your Name *" data-validation-required-message="Please enter your name.">
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="email" type="email" placeholder="Your Email *" data-validation-required-message="Please enter your email address.">
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-validation-required-message="Please enter your phone number.">
+                  </div>
+                </div>
 
-{% block extra_js %}
-<script src='{% static "js/select2.min.js" %}'></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<script type="text/javascript">
-  $('#reservationtime').daterangepicker({
-    autoUpdateInput: false,
-    locale: {
-        cancelLabel: 'Clear'
-    }
-  });
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input class="form-control" id="agency" type="text" placeholder="Your Agency *" data-validation-required-message="Please enter your agency.">
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="ID" type="text" placeholder="Your ID *" data-validation-required-message="Please enter your ID address.">
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="code" type="text" placeholder="Your Code *" data-validation-required-message="Please enter your code number.">
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12 text-center">
+                  <div id="success"></div>
+                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Register</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  $('.select2').select2();
-</script>
-<script src='{% static "js/Chart.js" %}'></script>
-<script>
-  var PieData        = {
-    labels: ["Green", "Blue", "Gray", "Purple", "Yellow", "Red", "Black"],
-    datasets: [{
-      backgroundColor: [
-        "#2ecc71",
-        "#3498db",
-        "#95a5a6",
-        "#9b59b6",
-        "#f1c40f",
-        "#e74c3c",
-        "#34495e"
-      ],
-      data: [12, 19, 3, 17, 28, 24, 7]
-    }]
-  };
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright">Copyright &copy; Your Website 2018</span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline quicklinks">
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-  var pieOptions     = {
-    //Boolean - Whether we should show a stroke on each segment
-    segmentShowStroke    : true,
-    //String - The colour of each segment stroke
-    segmentStrokeColor   : '#fff',
-    //Number - The width of each segment stroke
-    segmentStrokeWidth   : 2,
-    //Number - The percentage of the chart that we cut out of the middle
-    percentageInnerCutout: 50, // This is 0 for Pie charts
-    //Number - Amount of animation steps
-    animationSteps       : 100,
-    //String - Animation easing effect
-    animationEasing      : 'easeOutBounce',
-    //Boolean - Whether we animate the rotation of the Doughnut
-    animateRotate        : true,
-    //Boolean - Whether we animate scaling the Doughnut from the centre
-    animateScale         : false,
-    //Boolean - whether to make the chart responsive to window resizing
-    responsive           : true,
-    // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
-    maintainAspectRatio  : true,
-    //String - A legend template
-    legend: {
-      display: false,
-    }
-  }
+    <!-- Bootstrap core JavaScript -->
+    <script src='{% static "vendor/jquery/jquery.min.js" %}'></script>
+    <script src='{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
 
-  var ctx = document.getElementById("pieChart").getContext('2d');
-  var myChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: PieData,
-    options: pieOptions
-  });
+    <!-- Plugin JavaScript -->
+    <script src='{% static "vendor/jquery-easing/jquery.easing.min.js" %}'></script>
 
-      //-------------
-      //- BAR CHART -
-      //-------------
-  var barChartOptions                  = {
-    //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
-    scaleBeginAtZero        : true,
-    //Boolean - Whether grid lines are shown across the chart
-    scaleShowGridLines      : true,
-    //String - Colour of the grid lines
-    scaleGridLineColor      : 'rgba(0,0,0,.05)',
-    //Number - Width of the grid lines
-    scaleGridLineWidth      : 1,
-    //Boolean - Whether to show horizontal lines (except X axis)
-    scaleShowHorizontalLines: true,
-    //Boolean - Whether to show vertical lines (except Y axis)
-    scaleShowVerticalLines  : true,
-    //Boolean - If there is a stroke on each bar
-    barShowStroke           : true,
-    //Number - Pixel width of the bar stroke
-    barStrokeWidth          : 2,
-    //Number - Spacing between each of the X value sets
-    barValueSpacing         : 5,
-    //Number - Spacing between data sets within X values
-    barDatasetSpacing       : 1,
-    //Boolean - whether to make the chart responsive
-    responsive              : true,
-    maintainAspectRatio     : true,
+    <!-- Contact form JavaScript -->
+    <script src='{% static "js/jqBootstrapValidation.js" %}'></script>
+    <script src='{% static "js/contact_me.js" %}'></script>
 
-    //String - A legend template
-    legend: {
-      display: false,
-    }
-  }
+    <!-- Custom scripts for this template -->
+    <script src='{% static "js/agency.min.js" %}'></script>
 
-  var areaChartData = {
-    labels  : ['Facebook', 'Twitter', 'Instagram', 'youtube', 'tegegram', 'ads', 'ads2', 'Facebook', 'Twitter', 'Instagram', 'youtube', 'tegegram', 'ads', 'ads2',, 'youtube', 'tegegram', 'ads', 'ads2'],
-    datasets: [
-      {
-        label               : 'Digital Goods',
-        backgroundColor     : 'rgba(231,176,50,0.9)',
-        strokeColor         : 'rgba(231,176,50,0.8)',
-        pointColor          : '#3b8bba',
-        pointStrokeColor    : 'rgba(60,141,188,1)',
-        pointHighlightFill  : '#fff',
-        pointHighlightStroke: 'rgba(60,141,188,1)',
-        data                : [28, 48, 40, 19, 86, 27, 90,28, 48, 40, 19, 86, 27, 90, 19, 86, 27, 90]
-      }
-    ]
-  }
+  </body>
 
-  var ctx = document.getElementById("barChart").getContext('2d');
-
-  var myBarChart = new Chart(ctx, {
-    type: 'bar',
-    data: areaChartData,
-    options: barChartOptions
-  });
-
-</script>
-
-{% endblock extra_js %}
+</html>
